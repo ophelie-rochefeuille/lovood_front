@@ -1,0 +1,38 @@
+.main-div-propos{
+    max-width: 1440px;
+    @include grid-lg;
+    display:grid; 
+    margin:0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.div-container-nous,
+.div-valeurs{
+    grid-column: 3/ span 9;
+    width: 100%;
+    h1{
+        font-family: "quicksand-regular";
+    }
+    p{
+        font-family: "quicksand-light";
+        font-size: 24px;
+        text-align: justify;
+    }
+}
+
+
+.valeurs{
+    @include grid-lg;
+    display:grid; 
+    margin: 50px 0px;
+}
+
+.picture-valeurs{
+   grid-column: 1/ span 3;
+}
+
+.paraph-valeurs{
+    grid-column: 5/span 8;
+}

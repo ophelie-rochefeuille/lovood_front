@@ -1,0 +1,337 @@
+.footer {
+  background-color: #fff2b5;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.presentation-footer {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.presentation-footer h1 {
+  font-family: "quicksand-bold";
+  font-size: 40px;
+  color: #b2b5fa;
+}
+
+.logo-lovood {
+  max-width: 70px;
+}
+
+.social-network-main {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.pic-social-network {
+  width: 30px;
+}
+
+.social-network-icon {
+  margin: 10px;
+}
+
+.items {
+  margin: 20px;
+  font-family: "quicksand-light";
+  text-decoration: none;
+}
+
+.main-div-propos {
+  max-width: 1440px;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  margin: 0px 8px;
+  display: grid;
+  margin: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.div-container-nous,
+.div-valeurs {
+  grid-column: 3/span 9;
+  width: 100%;
+}
+.div-container-nous h1,
+.div-valeurs h1 {
+  font-family: "quicksand-regular";
+}
+.div-container-nous p,
+.div-valeurs p {
+  font-family: "quicksand-light";
+  font-size: 24px;
+  text-align: justify;
+}
+
+.valeurs {
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  margin: 0px 8px;
+  display: grid;
+  margin: 50px 0px;
+}
+
+.picture-valeurs {
+  grid-column: 1/span 3;
+}
+
+.paraph-valeurs {
+  grid-column: 5/span 8;
+}
+
+@font-face {
+  font-family: "quicksand-bold";
+  src: url("./assets/fonts/Quicksand-Bold.woff2") format("woff2"), url("./assets/fonts/Quicksand-Bold_1.woff") format("woff");
+}
+@font-face {
+  font-family: "quicksand-regular";
+  src: url("./assets/fonts/Quicksand-Regular.woff2") format("woff2"), url("./assets/fonts/Quicksand-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "quicksand-light";
+  src: url("./assets/fonts/Quicksand-Light.woff2") format("woff2"), url("./assets/fonts/Quicksand-Light_1.woff") format("woff");
+}
+@font-face {
+  font-family: "quicksand-medium";
+  src: url("./assets/fonts/Quicksand-Medium.woff2") format("woff2"), url("./assets/fonts/Quicksand-Medium_1.woff") format("woff");
+}
+@font-face {
+  font-family: "quicksand-semiBold";
+  src: url("./assets/fonts/Quicksand-SemiBold.woff2") format("woff2"), url("./assets/fonts/Quicksand-SemiBold_1.woff") format("woff");
+}
+body {
+  margin: 0;
+}
+
+.main-div-home-pic {
+  background-color: #FFFBE8;
+  display: flex;
+  justify-content: center;
+}
+
+.home-page-pic {
+  max-width: 1440px;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  margin: 0px 8px;
+  display: grid;
+  margin: 0;
+  background-image: url("./assets/pictures/picture_couple_charte.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 1/span 12;
+  width: 100%;
+  height: 90vh;
+}
+
+.title-home-page {
+  grid-column: 1/span 12;
+  font-family: "quicksand-regular";
+  color: #ffffff;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.div-scroll {
+  grid-column: 1/span 12;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.scroll {
+  font-family: "quicksand-light";
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.arrow-down {
+  max-width: 50px;
+}
+
+.who-we-are-div {
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  margin: 0px 8px;
+  display: grid;
+}
+
+.title-who-we-are {
+  grid-column: 1/span 12;
+  font-family: "quicksand-regular";
+  font-size: 32px;
+  text-align: center;
+  margin: 50px 0px;
+}
+
+.who-we-are-pic {
+  width: 100%;
+  grid-column: 3/span 8;
+  border-radius: 8px;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.paraph-who-we-are {
+  grid-column: 3/span 8;
+  font-size: 24px;
+  font-family: "quicksand-light";
+  text-align: center;
+}
+
+.objectives-div-one,
+.objectives-div-two,
+.objectives-div-three {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  margin: 0px 8px;
+  display: grid;
+  padding: 70px 10px;
+  align-items: center;
+}
+
+.main-div-objectives-one,
+.main-div-objectives-three {
+  background-color: #FFFBE8;
+  display: flex;
+  justify-content: center;
+}
+
+.main-div-objectives-two {
+  display: flex;
+  justify-content: center;
+}
+
+.objectives-pic-one,
+.objectives-pic-two,
+.objectives-pic-three {
+  width: 100%;
+}
+
+.objectives-pic-one,
+.objectives-pic-three {
+  grid-column: 2/span 5;
+  border-radius: 8px;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.objectives-pic-two {
+  grid-column: 7/span 5;
+  border-radius: 8px;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+}
+
+.choose-camp-div {
+  grid-column: 7/span 5;
+}
+.choose-camp-div h2 {
+  font-size: 30px;
+  font-family: "quicksand-regular";
+  text-align: center;
+}
+.choose-camp-div p {
+  font-size: 20px;
+  font-family: "quicksand-light";
+  text-align: center;
+}
+
+.choose-profils-gouts {
+  grid-column: 2/span 5;
+}
+.choose-profils-gouts h2 {
+  font-size: 30px;
+  font-family: "quicksand-regular";
+  text-align: center;
+}
+.choose-profils-gouts p {
+  font-size: 20px;
+  font-family: "quicksand-light";
+  text-align: center;
+}
+
+.choose-discussion {
+  grid-column: 7/span 5;
+}
+.choose-discussion h2 {
+  font-size: 30px;
+  font-family: "quicksand-regular";
+  text-align: center;
+}
+.choose-discussion p {
+  font-size: 20px;
+  font-family: "quicksand-light";
+  text-align: center;
+}
+
+.main-div-presentation-confidentiality {
+  display: flex;
+  justify-content: center;
+}
+
+.confidentiality-presentation-div {
+  max-width: 1440px;
+  padding-top: 90px;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  margin: 0px 8px;
+  display: grid;
+}
+.confidentiality-presentation-div h1 {
+  grid-column: 2/span 10;
+  text-align: center;
+  font-family: "quicksand-regular";
+}
+.confidentiality-presentation-div p {
+  grid-column: 2/span 10;
+  font-size: 18px;
+  font-family: "quicksand-light";
+  text-align: justify;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons-main {
+  display: flex;
+  align-items: center;
+}
+
+.logo-lovood {
+  width: 70px;
+}
+
+.button-header {
+  margin: 0px 5px;
+  border: none;
+  background: none;
+  font-family: "quicksand-regular";
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=style.css.map */

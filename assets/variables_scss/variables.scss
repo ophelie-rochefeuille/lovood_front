@@ -1,0 +1,10 @@
+@mixin grid-lg {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 32px;
+    margin: 0px 8px;
+};
+
+
+
+
+  
