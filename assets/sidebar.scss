@@ -1,0 +1,34 @@
+.sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    background-color: white;
+}
+
+.items-sidebar{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0px 20px 0px 20px;
+}
+
+.profil-sidebar{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.img-profil-sidebar-id{
+    max-width: 80px;
+}
+
+.img-profil-sidebar{
+    max-width: 20px;
+    margin-left: 50px;;
+}

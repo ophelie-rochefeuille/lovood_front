@@ -1,45 +1,49 @@
+.footer {
+  background-color: #fff2b5;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
-  .footer {
-    background-color: #fff2b5;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.presentation-footer {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-family: "quicksand-bold";
+    font-size: 40px;
+    color: #b2b5fa;
   }
-  
-  .presentation-footer {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1 {
-      font-family: "quicksand-bold";
-      font-size: 40px;
-      color: #b2b5fa;
-    }
-  }
-  .logo-lovood {
-    max-width: 70px;
-  }
-  
-  .social-network-main {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .pic-social-network {
-    width: 30px;
-  }
-  
-  .social-network-icon {
-    margin: 10px;
-  }
-  .items {
-    margin: 20px;
-    font-family: "quicksand-light";
-    text-decoration: none;
-  }
+}
+.logo-lovood {
+  max-width: 70px;
+}
+
+.social-network-main {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.pic-social-network {
+  width: 30px;
+}
+
+.social-network-icon {
+  margin: 10px;
+}
+.items {
+  margin: 20px;
+  font-family: "quicksand-light";
+  text-decoration: none;
+}
+
+.twitter {
+  display: flex;
+  align-items: center;
+}

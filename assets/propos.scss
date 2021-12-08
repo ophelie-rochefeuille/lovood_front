@@ -1,3 +1,5 @@
+@import './variables_scss/variables';
+
 .main-div-propos{
     max-width: 1440px;
     @include grid-lg;
@@ -14,6 +16,7 @@
     width: 100%;
     h1{
         font-family: "quicksand-regular";
+        font-size: 40px;
     }
     p{
         font-family: "quicksand-light";

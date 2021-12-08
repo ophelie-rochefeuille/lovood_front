@@ -1,6 +1,12 @@
 @import './variables_scss/variables.scss';
 @import './footer.scss';
 @import './propos.scss';
+@import './form.scss';
+@import './header.scss';
+@import './sidebar.scss';
+@import './profil.scss';
+@import './inscription.scss';
+
 
 @font-face {
   font-family: "quicksand-bold";
@@ -58,9 +64,9 @@ body{
   .title-home-page{
     grid-column: 1/ span 12;
     font-family: "quicksand-regular";
-    color: #ffffff;
-    padding-top: 50px;
+    color: white;
     text-align: center;
+    padding-top: 0px;
   }
   
   .div-scroll{
@@ -244,6 +250,8 @@ body{
   background: none;
   font-family: "quicksand-regular";
   font-size: 18px;
+  text-decoration: none;
+  color: black;
   }
    
   

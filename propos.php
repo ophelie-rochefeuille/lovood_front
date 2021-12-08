@@ -1,3 +1,6 @@
+<?php
+include_once 'header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,17 +13,7 @@
 </head>
 
 <body>
-    <header>
-
-        <div class="header-main">
-            <img class="logo-lovood" alt="logo" src="./assets/pictures/Capture d’écran 2021-09-27 à 16.03 3.png">
-            <div class="buttons-main">
-                <button class="button-header" type="button">Connexion</button>
-                <button class="button-header">Inscription</button>
-            </div>
-        </div>
-
-    </header>
+    
     <div class="main-div-propos">
 
         <div class="div-container-nous">
@@ -89,8 +82,8 @@
 
                 <div class="footer-items">
                     <a class="items">Nous contacter</a> <span>/</span>
-                    <a class="items" href="./propos.html">A propos</a> <span>/</span>
-                    <a class="items">Confidentialité</a>
+                    <a class="items" href="./propos.php">A propos</a> <span>/</span>
+                    <a class="items" href="./confidentialite.php">Confidentialité</a>
                 </div>
             </div>
         </div>
