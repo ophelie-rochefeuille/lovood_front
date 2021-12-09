@@ -25,10 +25,12 @@
 <body>
     <div class="container-profil-principal">
         <h2>Bonjour <?php echo $userinfo['prenom']?>   <?php echo $userinfo['nom'] ?> </h2>
+       
 
     <div class="matchs-profil-div">
     <h1>Vos derniers matchs</h1>
     <p>Vous n'avez pas encore de match...</p>
+    <?php echo "<img src='pp_users/".$userinfo['photoProfil']."' >"; ?>
     </div>
 
     <div class="conv-profil-div">

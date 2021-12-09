@@ -1,0 +1,79 @@
+@import './variables_scss/variables.scss';
+
+.swipes-names{
+    font-family: "quicksand-light";
+    align-items: center;
+}
+
+.main-container-swipes{
+    @include grid-lg;
+    display: grid;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swipes-names{
+    grid-column: 1/ span 12;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.picture-swipe{
+    max-width: 500px;
+    max-height: 600px;
+    border-radius: 8px;
+}
+.card{
+    grid-column: 3/ span 8;
+    display: flex;
+    background-color: #FFF2B5;
+    max-height: 600px;
+    border-radius: 10px;
+    box-shadow: 4px 2px 6px rgb(0 0 0 / 10%)
+
+}
+
+.infos-swipes{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+        font-family: "quicksand-regular";
+        margin-top: 20%;
+    };
+    h2{
+        font-family: "quicksand-light";
+    };
+    h3{
+        font-family: "quicksand-light";
+    }
+}
+
+.swipe-buttons
+{
+    max-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    margin: 10px;
+    background-color: #FFF2B5;
+    color: #FFF2B5
+}
+.swipe-img-b{
+    width: 35px; 
+    height: 35px;
+    border: none;
+    background-color: #FFF2B5;
+}
+
+.choices-swipes{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin-top: auto;
+}
+

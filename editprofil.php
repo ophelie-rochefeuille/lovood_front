@@ -5,6 +5,7 @@ include 'header.php';
 
 if(isset($_SESSION['id']))
 {
+
     $requser = $bdd->prepare("SELECT * FROM usertest WHERE id = ?");
     $requser->execute(array($_SESSION['id']));
     $user = $requser->fetch();
@@ -92,22 +93,35 @@ if(isset($_SESSION['id']))
                 <input type="email" name="newemail" class="form-control" placeholder="Nouveau mail" value="<?php echo $user['email']; ?>">
             </div>
             <div class="form-group">
-                <input type="text" name="newville" class="form-control" placeholder="Nouvelle ville" value="<?php echo $user['ville']; ?>">
+            <label class="label-insc" for="ville">Ville</label>
+                <select  class="select-insc" name="newville"  value="<?php if(isset($ville)){echo $ville;}?>">
+                        <option value="1">Paris</option>
+                        <option value="2">Marseille</option>
+                        <option value="3">Lyon</option>
+                        <option value="4">Toulouse</option>
+                        <option value="5">Nice</option>
+                        <option value="6">Nantes</option>
+                        <option value="7">Strasbourg</option>
+                        <option value="8">Montpellier</option>
+                        <option value="9">Bordeaux</option>
+                        <option value="10">Le Mans</option>
+                    </select>
             </div>
             <label>Nouveau genre recherché</label>
             <div class="form-group">
                 <select name="newgenreRechercher">
-                    <option value="Homme">Homme</option>
-                    <option value="Femme">Femme</option>
-                    <option value="Autre">Autre</option>
+                    <option value="1">Homme</option>
+                    <option value="2">Femme</option>
+                    <option value="3">Autre</option>
                 </select>
             </div>
             <div class="form-group">
             <label>Nouvelle tranche age</label>
                 <select name="newtrancheAge">
-                    <option value="18 - 21">18 - 21</option>
-                    <option value="22 - 25">22 - 25</option>
-                    <option value="26 - 30">26 - 30</option>
+                <option value="1">18 - 21</option>
+                        <option value="2">22 - 25</option>
+                        <option value="3">26 - 29</option>
+                        <option value="4">30 - 32</option>
                 </select>
             </div>
             <div class="form-group">

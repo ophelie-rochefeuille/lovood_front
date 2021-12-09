@@ -7,6 +7,8 @@ include_once 'config.php';
 
 if(isset($_POST['formInscriptionBtn']))
 {
+    $target = "pp_users/".basename($_FILES['photoProfil']['name']);
+
     // Patch XSS
     $nom = htmlspecialchars($_POST['nom']);
     $prenom = htmlspecialchars($_POST['prenom']);
@@ -18,6 +20,7 @@ if(isset($_POST['formInscriptionBtn']))
     $trancheAge = htmlspecialchars($_POST['trancheAge']);
     $platPref = htmlspecialchars($_POST['platPref']);
     $typeRelation = htmlspecialchars($_POST['typeRelation']);
+    $photoProfil = $_FILES['photoProfil']['name'];
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $motdepasse = sha1($_POST['motdepasse']);
     $motdepasse_retype = sha1($_POST['motdepasse_retype']);
@@ -58,8 +61,8 @@ if(isset($_POST['formInscriptionBtn']))
             {
                 //on insere en bdd
                 $insert = $bdd->prepare('INSERT INTO usertest
-                            (nom, prenom, dateNaissance, genre, email, ville, genreRechercher, trancheAge, platPref, typeRelation, pseudo, motdepasse, token)
-                            VALUES(:nom, :prenom, :dateNaissance, :genre, :email, :ville, :genreRechercher, :trancheAge, :platPref, :typeRelation, :pseudo, :motdepasse, :token) ');
+                            (nom, prenom, dateNaissance, genre, email, ville, genreRechercher, trancheAge, platPref, typeRelation, photoProfil, pseudo, motdepasse, token)
+                            VALUES(:nom, :prenom, :dateNaissance, :genre, :email, :ville, :genreRechercher, :trancheAge, :platPref, :typeRelation, :photoProfil, :pseudo, :motdepasse, :token) ');
      
                 $insert->execute(array(
                 'nom' => $nom,
@@ -72,10 +75,17 @@ if(isset($_POST['formInscriptionBtn']))
                 'trancheAge' => $trancheAge,
                 'platPref' => $platPref,
                 'typeRelation' => $typeRelation,
+                'photoProfil' => $photoProfil,
                 'pseudo' => $pseudo,
                 'motdepasse' => $motdepasse,
                 'token' => bin2hex(openssl_random_pseudo_bytes(64))
                 ));
+
+                if(move_uploaded_file($_FILES['photoProfil']['tmp_name'], $target)){
+                    $msg = "image ok";
+                } else {
+                    $msg = "image pas ok";
+                }
                 
                 $erreur = "compte créer";
         } else {
@@ -118,7 +128,8 @@ if(isset($_POST['formInscriptionBtn']))
         <div class="login-form">
             
         
-            <form class="formulaire-insc" action="" method="post">
+            <form class="formulaire-insc" action="" method="post" enctype="multipart/form-data">
+
                 <h2 class="text-center title-form">Inscription</h2>   
                 
                 <div class="first-div-insc div-insc">
@@ -132,7 +143,7 @@ if(isset($_POST['formInscriptionBtn']))
                 </div>
                 <div class="form-group">
                 <label class="label-insc" for="date">Date de naissance</label>
-                    <input type="date" name="dateNaissance" class="form-control" placeholder="Date AAAA-MM-JJ" value="<?php if(isset($dateNaissance)){echo $dateNaissance;}?>">
+                    <input type="number" name="dateNaissance" min="18" max="32" class="form-control" placeholder="Age" value="<?php if(isset($dateNaissance)){echo $dateNaissance;}?>">
                 </div>
                 </div>
 
@@ -140,9 +151,9 @@ if(isset($_POST['formInscriptionBtn']))
                 <div class="form-group">
                 <label class="label-insc" for="genre">Ton genre</label>
                     <select class="select-insc" value="genre" name="genre">
-                        <option value="Homme">Homme</option>
-                        <option value="Femme">Femme</option>
-                        <option value="Autre">Autre</option>
+                        <option value="1">Homme</option>
+                        <option value="2">Femme</option>
+                        <option value="3">Autre</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -151,7 +162,18 @@ if(isset($_POST['formInscriptionBtn']))
                 </div>
                 <div class="form-group">
                 <label class="label-insc" for="ville">Ville</label>
-                    <input type="text" name="ville" class="form-control" placeholder="Ville"  value="<?php if(isset($ville)){echo $ville;}?>">
+                <select  class="select-insc" name="ville"  value="<?php if(isset($ville)){echo $ville;}?>">
+                        <option value="1">Paris</option>
+                        <option value="2">Marseille</option>
+                        <option value="3">Lyon</option>
+                        <option value="4">Toulouse</option>
+                        <option value="5">Nice</option>
+                        <option value="6">Nantes</option>
+                        <option value="7">Strasbourg</option>
+                        <option value="8">Montpellier</option>
+                        <option value="9">Bordeaux</option>
+                        <option value="10">Le Mans</option>
+                    </select>
                 </div>
             </div>
 
@@ -159,17 +181,18 @@ if(isset($_POST['formInscriptionBtn']))
                 <div class="form-group">
                 <label class="label-insc" for="genre">Quel genre cherches-tu ?</label>
                     <select class="select-insc" value="genreRechercher" name="genreRechercher">
-                        <option value="Homme">Homme</option>
-                        <option value="Femme">Femme</option>
-                        <option value="Autre">Autre</option>
+                        <option value="1">Homme</option>
+                        <option value="2">Femme</option>
+                        <option value="3">Autre</option>
                     </select>
                 </div>
                 <div class="form-group">
                 <label class="label-insc" for="age">Dans quelle tranche d'âge ?</label>
                     <select class="select-insc" value="trancheAge" name="trancheAge">
-                        <option value="18 - 21">18 - 21</option>
-                        <option value="22 - 25">22 - 25</option>
-                        <option value="26 - 30">26 - 30</option>
+                    <option value="1">18 - 21</option>
+                        <option value="2">22 - 25</option>
+                        <option value="3">26 - 29</option>
+                        <option value="4">30 - 32</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -187,6 +210,11 @@ if(isset($_POST['formInscriptionBtn']))
                         <option value="3">Super-mix</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <input type="file" name="photoProfil">
+                </div>
+
                 <div class="form-group">
                 <label class="label-insc" for="nom">Ton pseudo</label>
                     <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" value="<?php if(isset($pseudo)){echo $pseudo;}?>">

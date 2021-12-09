@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +47,7 @@
         <div class="sidebar">
           <div class='profil-sidebar'>
           <img class="img-profil-sidebar-id" src="./assets/pictures/Capture d’écran 2021-09-29 à 16.08 1.png" />
-          <a class="link-profil-navbar" href="./editprofil.php"><img class="img-profil-sidebar" src="./assets/pictures/Group 51.png" /></a>
+          <a class="link-profil-navbar" href="./ajoutPhoto.php"><img class="img-profil-sidebar" src="./assets/pictures/Group 51.png" /></a>
       </div>
           <ul class='items-sidebar'>
         <li class='nav-item-bar'>
@@ -81,6 +83,5 @@
         </header>
           <?php } ?>
 
-    
 </body>
 </html>
