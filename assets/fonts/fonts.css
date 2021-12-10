@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "quicksand-bold";
+  src: url("./Quicksand-Bold.woff2") format("woff2"), url("./Quicksand-Bold_1.woff") format("woff");
+}
+
+@font-face {
+  font-family: "quicksand-regular";
+  src: url("./Quicksand-Regular.woff2") format("woff2"), url("./Quicksand-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "quicksand-light";
+  src: url("./Quicksand-Light.woff2") format("woff2"), url("./Quicksand-Light_1.woff") format("woff");
+}
+
+@font-face {
+  font-family: "quicksand-medium";
+  src: url("./Quicksand-Medium.woff2") format("woff2"), url("./Quicksand-Medium_1.woff") format("woff");
+}
+
+@font-face {
+  font-family: "quicksand-semiBold";
+  src: url("./Quicksand-SemiBold.woff2") format("woff2"), url("./Quicksand-SemiBold_1.woff") format("woff");
+}
+/*# sourceMappingURL=fonts.css.map */

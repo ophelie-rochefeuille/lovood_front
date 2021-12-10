@@ -1,0 +1,118 @@
+@import './variables_scss/variables.scss';
+
+.main-container-contact{
+    margin-bottom: 70px;
+}
+.div-secondary-container-contact{
+    @include grid-lg;
+    display:grid; 
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-container-h1-text-contact{
+    grid-column: 1/ span 12;
+    h1{
+        font-family: "quicksand-regular";
+        text-align: center;
+    };
+    p{
+        font-family:"quicksand-light" ;
+        text-align: center;
+    }
+}
+
+.contact-links{
+    grid-column: 3/ span 3 ;
+    text-align: center;
+    background-color: #C0BAF5;
+    border-radius: 10% 2%;
+    h3{
+        font-family: "quicksand-regular";
+    };
+    p{
+        font-family: "quicksand-light";
+    }
+}
+
+.formulaire-contact-div{
+    grid-column: 6/ span 5;
+    display: flex;  
+    width: 100%;
+}
+form{
+    background-color: #EEECFF;
+    padding: 10px;
+    border-radius: 2% 10%;
+}
+
+.name-label{
+    font-family: "quicksand-regular";
+    margin-bottom: 5px;
+}
+
+.button-submit{
+    display: flex;
+    justify-content: center;
+}
+
+.main-container-form,
+form{
+    width: 100%;
+}
+
+.message-input{
+    width: 90%;
+    min-height: 70px;
+}
+.names{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+.div-object-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mail-phone{
+    display: flex;
+    margin: 10px 0px 30px 0px;
+    justify-content: space-evenly;
+}
+.button-send{
+    margin-top: 30px;
+    max-width: 150px;
+    background-color: #C0BAF5;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-family: "quicksand-regular";
+}
+
+.input-contact{
+    border-radius: 4px;
+    border:none;
+    background-color: #FFFAE1;
+}
+.input-contact:focus{
+border:none;
+outline: none;
+}
+
+.phone-number,
+.mail-lovood,
+.reseaux-lovood{
+    display: flex;
+    justify-content:space-between;
+    margin: 10px;
+    img{
+        max-width: 40px;
+        color: blue;
+    };
+    p{
+    font-family: "quicksand-light";
+    }
+}
