@@ -1,20 +1,10 @@
 <?php
-    session_start();
+    
     require 'config.php';
     include_once 'header.php';
-
-    $query = $bdd->prepare("SELECT * FROM friend_request WHERE pseudo_1 = :pseudo_1 OR pseudo_2 = :pseudo_2");
-    $query->execute([
-        "pseudo_1" => $_SESSION['pseudo'],
-        "pseudo_2" => $_SESSION['pseudo']
-    ]);
-
+ $query = $bdd->query("SELECT * FROM usertest");
     $data = $query->fetchAll();
-
-    if($_POST['pseudo'])
-    {
-        $user_check[] = $_SESSION['pseudo'];
-    }
+ 
 ?>
 
 <!DOCTYPE html>
@@ -37,26 +27,16 @@
             
                 <div class="slideshow-container">
 
-            <!-- Full-width images with number and caption text -->
+          
             <div class="mySlides fade">
                 <img  class="picture-swipe" src="./assets/pictures/pexels-andrea-piacquadio-774909.jpg" >
             
             </div>
 
-            <div class="mySlides fade">
-                <img class="picture-swipe" src="./assets/pictures/pexels-daniel-xavier-1239291.jpg" >
-            
-            </div>
-
-            <div class="mySlides fade">
-                <img class="picture-swipe" src="./assets/pictures/pexels-luizclas-1848565.jpg" >
-            </div>
+           
 
             <!-- Next and previous buttons -->
-            <div class="slide-button">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
+         
             </div>
             <br>
 
@@ -73,8 +53,8 @@
                 <h2 class="age-swipe">Elle a 26 ans</h2>
                 <h3 class="plat-pref-swipe">Son plât préféré c'est : La Tarte tatin</h3>  
                 <div class="choices-swipes">
-                <button class="no-swipe swipe-buttons"><img src="./assets/pictures/no.png" alt="" class="no-swipe-img swipe-img-b"></button>
-                <button class="yes-swipe swipe-buttons"><img src="./assets/pictures/Vector.png" alt="" class="yes-swipe-img swipe-img-b"></button>           
+                <button onclick="supp()" class=" fleche--prev no-swipe swipe-buttons"><img src="./assets/pictures/no.png" alt="" class="no-swipe-img swipe-img-b"></button>
+                <button  onclick="ajout()" class=" fleche--next yes-swipe swipe-buttons"><img src="./assets/pictures/Vector.png" alt="" class="yes-swipe-img swipe-img-b"></button>           
             </div>
                     </div>
 
@@ -84,17 +64,58 @@
 
 
             
+        <div class="final">
 
+<?php
+   
 
+    for($i = 0; $i < sizeof($data); $i++)
+    {
+       
+            echo ' 
+            <div class="card">
+            <div class="mySlides fade">
+                <img class="picture-swipe" src="pp_users/'.$data[$i]["photoProfil"].'" />
+            </div>
+           
+            <div class="infos-swipes">
+            <h1 class="fname-swipe">Voici '. $data[$i]["prenom"].'</h1>
+            <h2 class="age-swipe">Cette magnifique personne a '. $data[$i]["dateNaissance"].' 
+            ans</h2>
+            <h3 class="plat-pref-swipe">Son plât préféré c"est : La Tarte tatin</h3>  
+            <div class="choices-swipes">
+            <button  onclick="<script type="text/javascript">supp();</script>" class=" fleche fleche--prev no-swipe swipe-buttons"><img src="./assets/pictures/no.png" alt="" class="no-swipe-img swipe-img-b"></button>
+            <button  onclick="ajout()" class=" fleche fleche--next yes-swipe swipe-buttons"><img src="./assets/pictures/Vector.png" alt="" class="yes-swipe-img swipe-img-b"></button>           
+             </div>
+         </div>
+         </div>
+            ';
+            
+    
+    }
+?>
+
+        </div>
+            
 
 
 </body>
 <script type="text/javascript" src="./swipe.js"></script>
 
+<script type="text/javascript">
+let matchCards = document.querySelector('.card');
+function supp(){
+  matchCards.remove()
+}
+
+function ajout(){
+  matchCards.remove()
+}
+</script>
+
 
 <style>
 
-* {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
@@ -104,10 +125,15 @@
   margin: auto;
 }
 
+.img-essai{
+    max-width: 150px
+}
+.name{
+    color:blue
+}
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
   max-height: 600px
 }
 

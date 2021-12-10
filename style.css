@@ -382,12 +382,23 @@ body {
 }
 
 .card {
-  grid-column: 3/span 8;
+  grid-column: 1/span 12;
   display: flex;
   background-color: #FFF2B5;
   max-height: 600px;
   border-radius: 10px;
+  min-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
   box-shadow: 4px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.final {
+  grid-column: 1/span 12;
+  min-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .infos-swipes {
