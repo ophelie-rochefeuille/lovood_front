@@ -25,7 +25,10 @@
 }
 
 .img-profil-sidebar-id{
-    max-width: 80px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .img-profil-sidebar{

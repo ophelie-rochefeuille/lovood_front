@@ -82,12 +82,13 @@ if(isset($_SESSION['id']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <title>Edition</title>
 </head>
 <body>
 
     <div class="login-form">
-        <form action="" method="post">
+        <form class="form-modification" action="" method="post">
             <h2 class="text-center">Modification</h2>       
             <div class="form-group">
                 <input type="email" name="newemail" class="form-control" placeholder="Nouveau mail" value="<?php echo $user['email']; ?>">

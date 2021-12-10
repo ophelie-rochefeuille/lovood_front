@@ -212,10 +212,6 @@ if(isset($_POST['formInscriptionBtn']))
                 </div>
 
                 <div class="form-group">
-                    <input type="file" name="photoProfil">
-                </div>
-
-                <div class="form-group">
                 <label class="label-insc" for="nom">Ton pseudo</label>
                     <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" value="<?php if(isset($pseudo)){echo $pseudo;}?>">
                 </div>
@@ -228,9 +224,20 @@ if(isset($_POST['formInscriptionBtn']))
                     <input type="password" name="motdepasse_retype" class="form-control" placeholder="Re-tapez le mot de passe" autocomplete="off">
                 </div>
             </div>
+
+            <div class="five-div-ins">
+            <div class="form-img-div">
+                    <input type="file" name="photoProfil">
+                    <input type="file" name="photoProfil">
+                    <input type="file" name="photoProfil">
+                    <input type="file" name="photoProfil">
+                </div>
+            </div>
                 <div class="form-group final-div-insc">
                     <button type="submit" name="formInscriptionBtn" class="btn btn-primary btn-block">Inscription</button>
                 </div>   
+
+
             </form>
 
             <?php

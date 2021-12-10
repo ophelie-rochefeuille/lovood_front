@@ -273,7 +273,10 @@ form {
 }
 
 .img-profil-sidebar-id {
-  max-width: 80px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .img-profil-sidebar {
@@ -343,6 +346,10 @@ body {
 
 .fourth-div-insc {
   grid-column: 10/span 3;
+}
+
+.five-div-ins {
+  grid-column: 1/span 12;
 }
 
 .final-div-insc {
@@ -442,6 +449,31 @@ body {
   align-items: end;
   justify-content: center;
   margin-top: auto;
+}
+
+.form-control {
+  border: none;
+  border-radius: 4px;
+  font-family: "quicksand-light";
+  font-size: 14px;
+}
+
+.form-group {
+  font-family: "quicksand-light";
+}
+.form-group select {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.text-center {
+  font-family: "quicksand-light";
+}
+
+.btn-primary {
+  background-color: #9598E7;
+  border: none;
 }
 
 @font-face {

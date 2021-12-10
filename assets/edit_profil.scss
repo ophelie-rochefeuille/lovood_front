@@ -1,0 +1,27 @@
+@import './variables_scss/variables.scss';
+
+
+.form-control{
+    border:none;
+    border-radius: 4px;
+    font-family:"quicksand-light";
+    font-size: 14px;
+}
+
+.form-group{
+    font-family: "quicksand-light";
+    select{
+        border: none;
+        outline: none;
+        border-radius: 4px;
+    }
+}
+
+.text-center{
+    font-family: "quicksand-light";
+}
+
+.btn-primary{
+    background-color: #9598E7;
+    border: none;
+}

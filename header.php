@@ -1,5 +1,17 @@
 <?php 
 session_start();
+
+include_once 'config.php';
+
+
+    if(isset($_GET['id']) AND $_GET['id'] > 0)
+    {
+        $getid = intval($_GET['id']);
+
+        $requser = $bdd->prepare("SELECT * FROM usertest WHERE id = ?");
+        $requser->execute(array($getid));
+
+        $userinfo = $requser->fetch();}
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +42,7 @@ session_start();
           <a class='nav-link' href='swipes.php?id=<?php echo $_SESSION['id']; ?>'>Swipes</a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link' href='messages.php'>Messages</a>
+          <a class='nav-link' href='messages.php?id=<?php echo $_SESSION['id']; ?>'>Messages</a>
         </li>
         <li class='nav-item'>
           <a class='nav-link' href='#'>Amis</a>
@@ -46,24 +58,24 @@ session_start();
 
         <div class="sidebar">
           <div class='profil-sidebar'>
-          <img class="img-profil-sidebar-id" src="./assets/pictures/Capture d’écran 2021-09-29 à 16.08 1.png" />
+          <?php echo "<img class='img-profil-sidebar-id' src='pp_users/".$userinfo['photoProfil']."' >"; ?>
           <a class="link-profil-navbar" href="./ajoutPhoto.php"><img class="img-profil-sidebar" src="./assets/pictures/Group 51.png" /></a>
       </div>
           <ul class='items-sidebar'>
         <li class='nav-item-bar'>
-          <a class='nav-link' href="./editprofil.php">Mon profil</a>
+          <a class='nav-link' href="./editprofil.php?id=<?php echo $_SESSION['id']; ?>">Mon profil</a>
         </li>
         <li class='nav-item-bar'>
-          <a class='nav-link' href='./propos.php'>A propos</a>
+          <a class='nav-link' href='./propos.php?id=<?php echo $_SESSION['id']; ?>'>A propos</a>
         </li>
         <li class='nav-item-bar'>
-          <a class='nav-link' href='./confidentialite.php'>Confidentialité</a>
+          <a class='nav-link' href='./confidentialite.php?id=<?php echo $_SESSION['id']; ?>'>Confidentialité</a>
         </li>
         <li class='nav-item-bar'>
         <a class='nav-link'>Suppression</a>
         </li>
         <li class='nav-item-bar'>
-        <a class='nav-link'href="./form.php">Nous contacter</a>
+        <a class='nav-link'href="./form.php?id=<?php echo $_SESSION['id']; ?>">Nous contacter</a>
         </li>
       </ul>
       </div>
