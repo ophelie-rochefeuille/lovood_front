@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "db.php";
+require "config.php";
 
 if($_GET['action'] == "delete" || $_GET['action'] == "deny")
 {
@@ -23,4 +23,11 @@ if($_GET['action'] == "accept")
 {
     $db->query('UPDATE friends SET is_pending = 0 WHERE id ='.$_GET['id']);
     header("Location:user.php");
+}
+
+if($_GET['action'] == "deleteUser")
+{
+    $bdd->query("DELETE FROM usertest WHERE id=".$_GET['id']);
+    session_destroy();
+    header("Location:index.php");
 }

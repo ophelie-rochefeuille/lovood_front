@@ -23,10 +23,6 @@ include_once 'header.php';
 
                 <div class="home-page-pic">
                     <h1 class="title-home-page">L'amour commence aujourd'hui</h1>
-                    <div class="div-scroll">
-                        <span class="scroll">Scroll</span>
-                        <img class="arrow-down" src="./assets/pictures/arrow_down.svg" />
-                    </div>
                 </div>
             </div>
             <div class="home-page-presentation">

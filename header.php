@@ -32,7 +32,7 @@ include_once 'config.php';
         <div class="header-main">
 
         <div class='container-logo'>
-        <a href="./index.php"><img class="logo-lovood" alt="logo" src="./assets/pictures/Capture d’écran 2021-09-27 à 16.03 3.png"> </a>
+        <a href="./index.php"><img class="logo-lovood" alt="logo" src="./assets/pictures/logo_lovood.png"> </a>
       </div>
         <div class='container-nav'>
         <li class='nav-item'>
@@ -58,7 +58,7 @@ include_once 'config.php';
 
         <div class="sidebar">
           <div class='profil-sidebar'>
-          <?php echo "<img class='img-profil-sidebar-id' src='pp_users/".$userinfo['photoProfil']."' >"; ?>
+          <?php echo "<img class='img-profil-sidebar-id' src='pp_users/".$userinfo['photoProfil']."' />"; ?>
           <a class="link-profil-navbar" href="./ajoutPhoto.php"><img class="img-profil-sidebar" src="./assets/pictures/Group 51.png" /></a>
       </div>
           <ul class='items-sidebar'>
@@ -72,7 +72,7 @@ include_once 'config.php';
           <a class='nav-link' href='./confidentialite.php?id=<?php echo $_SESSION['id']; ?>'>Confidentialité</a>
         </li>
         <li class='nav-item-bar'>
-        <a class='nav-link'>Suppression</a>
+        <a class='nav-link' href='./action.php?action=deleteUser&id=<?php echo $_SESSION['id']; ?>'>Suppression</a>
         </li>
         <li class='nav-item-bar'>
         <a class='nav-link'href="./form.php?id=<?php echo $_SESSION['id']; ?>">Nous contacter</a>
@@ -85,7 +85,7 @@ include_once 'config.php';
         <header>
 
             <div class="header-main">
-                <a href="./index.php"><img class="logo-lovood" alt="logo" src="./assets/pictures/Capture d’écran 2021-09-27 à 16.03 3.png"> </a>
+                <a href="./index.php"><img class="logo-lovood" alt="logo" src="./assets/pictures/logo_lovood.png"> </a>
                 <div class="buttons-main">
                     <a class="button-header" href="connexion.php">Connexion</a>
                     <a class="button-header" href="inscription.php">Inscription</a>

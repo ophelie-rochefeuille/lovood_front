@@ -348,10 +348,6 @@ body {
   grid-column: 10/span 3;
 }
 
-.five-div-ins {
-  grid-column: 1/span 12;
-}
-
 .final-div-insc {
   grid-column: 1/span 12;
   display: flex;
@@ -528,6 +524,9 @@ body {
   color: white;
   text-align: center;
   padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .div-scroll {
@@ -711,6 +710,9 @@ header {
 
 .logo-lovood {
   width: 70px;
+  max-height: 70px;
+  object-fit: scale-down;
+  padding: 5px;
 }
 
 .button-header {

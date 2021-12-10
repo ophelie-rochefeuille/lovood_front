@@ -69,6 +69,9 @@ body{
     color: white;
     text-align: center;
     padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .div-scroll{
@@ -245,6 +248,9 @@ body{
    
   .logo-lovood{
   width: 70px;
+  max-height: 70px;
+  object-fit: scale-down;
+  padding: 5px;
   }
   .button-header{
   margin: 0px 5px;
